@@ -4,7 +4,7 @@ An interactive quantitative finance dashboard that prices European options three
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 This repository contains a full computational implementation developed as an academic project on **Algorithmic Options Pricing** at **Statmatics, IIT Kanpur**.
 
@@ -20,7 +20,7 @@ The goal was to build hands-on expertise in quantitative finance: deriving optio
 
 ---
 
-## 📌 Mathematical Architecture
+##  Mathematical Architecture
 
 ### 1. Risk-Neutral Valuation
 Under the risk-neutral measure, the discounted asset price is a martingale, so a European call is priced as:
@@ -45,7 +45,7 @@ The discounted mean payoff across simulated paths gives the Monte-Carlo price; t
 
 ---
 
-## 📌 Tech Stack & Dependencies
+##  Tech Stack & Dependencies
 
 * **Language:** Python 3.8+
 * **Core Numerics:** NumPy, SciPy (`scipy.fft.fft` and `scipy.stats.norm`)
@@ -57,7 +57,7 @@ To install dependencies, run:
 pip install streamlit numpy pandas scipy
 ```
 
-## 📌 How to Run the Web Application
+##  How to Run the Web Application
 
 1. Clone the repository (or download `Options_Pricing_Engine.py`) to your local machine.
 2. Launch the local Streamlit server:
@@ -66,7 +66,7 @@ pip install streamlit numpy pandas scipy
    ```
 3. Open your browser to the local URL (usually `http://localhost:8501`) to interact with the dashboard.
 
-## 📌 Using the Dashboard
+##  Using the Dashboard
 
 The sidebar controls market inputs (spot, strike, maturity, rate, dividend yield, volatility), FFT grid settings ($N$, $\eta$, $\alpha$), and Monte-Carlo settings (number of paths, time steps, VaR/CVaR confidence). Three tabs then show:
 
@@ -74,7 +74,7 @@ The sidebar controls market inputs (spot, strike, maturity, rate, dividend yield
 * **Carr-Madan FFT Pricing** — FFT price at the chosen strike, absolute error vs BSM, and the full FFT-vs-BSM curve across the strike chain.
 * **Monte-Carlo Risk Simulation** — simulated price with standard error, VaR/CVaR at the chosen confidence level, sample asset paths, the discounted payoff distribution, and a final BSM/FFT/Monte-Carlo comparison table.
 
-## 📌 Sample Insights & Experimentation
+##  Sample Insights & Experimentation
 
 * Since the FFT engine uses the same GBM characteristic function as BSM, the two prices should match to within numerical precision — a useful check that the damping coefficient $\alpha$ and grid settings ($N$, $\eta$) are configured correctly.
 * Increasing Monte-Carlo paths shrinks the standard error roughly as $1/\sqrt{n}$, tightening the confidence interval around the BSM/FFT benchmark.
