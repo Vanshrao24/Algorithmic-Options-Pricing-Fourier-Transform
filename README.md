@@ -1,4 +1,4 @@
-# Algorithmic Options Pricing: Fourier Transform & Stochastic Simulation
+# lgorithmic Options Pricing: Fourier Transform & Stochastic Simulation
 
 An interactive quantitative finance dashboard that prices European options three different ways — closed-form Black-Scholes-Merton, the Carr-Madan Fast Fourier Transform, and Monte-Carlo simulation — and cross-checks them against each other, while also quantifying downside risk with VaR and CVaR.
 
